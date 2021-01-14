@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+/**
+ *
+ * tHIS Function is used to for doing a api req to youtube translate api and then converting the text and doing limited no of searches
+ * by requesting only after every 500ms
+ */
+
 const Convert = ({ language, text }) => {
 	const [translatedText, setTranslatedText] = useState("");
 	const [debouncedText, setDebouncedText] = useState(text);
